@@ -1,0 +1,30 @@
+Clases de caracteres
+
+Una clase de caracteres coincide con cualquiera de un juego de caracteres. Las clases de caracteres incluyen los elementos del lenguaje enumerados en la tabla siguiente. Para obtener más información, consulta Character Classes.
+____________________________________________________________________________________
+[ grupo_caracteres ]  | Coincide con cualquier carácter individual de grupo_caracteres. De forma predeterminada, la coincidencia distingue entre mayúsculas y minúsculas. 	[ae] 	"a" en "casa" "a", "e" en "ave"
+ _____________________|____________________________________________________
+[^ grupo_caracteres ] |	Negación: coincide con cualquier carácter individual que no esté en grupo_caracteres. De forma predeterminada, los caracteres de grupo_caracteres distinguen entre mayúsculas y minúsculas. 	[^aei] 	"r", "n", "o" en "reino"
+______________________|
+[ first - last ] 	  | Intervalo de caracteres: coincide con cualquier carácter individual en el intervalo de primero a último. 	[A-Z] 	"A", "B" en "AB123"
+______________________|
+. 	Carácter comodín: | coincide con cualquier carácter excepto con \n. Para coincidir con un carácter de punto literal (. o \u002E), debe anteponerle el carácter de escape (\.). 	a.e 	"ave" en "llave" "ate" en "yate"
+______________________|
+\p{ name } 	          | Coincide con cualquier carácter individual que pertenezca a la categoría general Unicode o al bloque con nombre especificado por name. 	\p{Lu} \p{IsCyrillic} 	"C", "L" en "City Lights" "Д", "Ж" in "ДЖem"
+______________________|
+\P{ name } 	Coincide con cualquier carácter individual que no pertenezca a la categoría general Unicode o al bloque con nombre especificado por name. 	\P{Lu}
+______________________|
+\P{IsCyrillic} 	"i", "t", "y" en "City" "e", "m" in "ДЖem"
+______________________|
+\w 	Coincide con cualquier carácter de una palabra. 	\w 	"I", "D", "A", "1", "3" en "ID A1.3"
+______________________|
+\W 	Coincide con cualquier carácter que no pertenezca a una palabra. 	\W 	" ", "." en "ID A1.3"
+______________________|
+\s 	Coincide con cualquier carácter que sea un espacio en blanco. 	\w\s 	"D " en "ID A1.3"
+______________________|
+\S 	Coincide con cualquier carácter que no sea un espacio en blanco. 	\s\S 	" " en "int __ctr"
+______________________|
+\d 	Coincide con cualquier dígito decimal. 	\d 	"4" en "4 = IV"
+______________________|
+\D 	Coincide con cualquier carácter que no sea un dígito decimal.
+______________________|

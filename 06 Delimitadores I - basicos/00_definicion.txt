@@ -1,0 +1,6 @@
+Delimitadores
+
+Los delimitadores, o aserciones atómicas de ancho cero, hacen que una coincidencia 
+tenga éxito o no dependiendo de la posición actual en la cadena, pero no hacen que el motor 
+avance por la cadena ni consuma caracteres. Los metacaracteres enumerados en la tabla siguiente 
+son delimitadores

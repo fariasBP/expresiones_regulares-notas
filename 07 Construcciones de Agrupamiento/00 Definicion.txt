@@ -1,0 +1,5 @@
+Construcciones de agrupamiento
+
+Las construcciones de agrupamiento definen subexpresiones de una expresión regular y,
+normalmente, capturan subcadenas de una cadena de entrada. Las construcciones de agrupamiento
+incluyen los elementos del lenguaje enumerados en la tabla siguiente.
